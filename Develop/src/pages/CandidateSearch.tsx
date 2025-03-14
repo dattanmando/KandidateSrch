@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import { searchGithub, searchGithubUser } from '../api/API';
+import { searchGithub} from '../api/API';
 import { Candidate } from '../interfaces/Candidate.interface';
 import './CandidateSearch.css'; // Import the CSS file for styling
 
 const CandidateSearch = () => {
-  const [candidates, setCandidates] = useState<Candidate[]>([]);
+  const [_candidates, setCandidates] = useState<Candidate[]>([]);
   const [displayedUser, setDisplayedUser] = useState<Candidate | null>(null);
 
   useEffect(() => {

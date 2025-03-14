@@ -1,6 +1,7 @@
 const SavedCandidates = () => 
   {
     const tableCandidate = JSON.parse(localStorage.getItem('savedUsers')as string) || [];
+    console.log("Here is tableCandidate", tableCandidate);
     const tableUsers = tableCandidate.map((user: any) => (
       <tr key={user.id}>
         <td><img src={user.avatar_url} alt="Avatar" className="profile-picture" /></td>
